@@ -1034,62 +1034,93 @@ try{
 
 alert("Uploading screenshots...");
 
-const url1 =
-await uploadImage(proof1);
 
-const url2 =
-await uploadImage(proof2);
-
-const url3 =
-await uploadImage(proof3);
+const url1 = await uploadImage(proof1);
+const url2 = await uploadImage(proof2);
+const url3 = await uploadImage(proof3);
 
 
-
-await fetch(scriptURL,{
+await fetch(formspreeURL,{
 
 method:"POST",
 
+headers:{
+
+'Content-Type':'application/json',
+
+'Accept':'application/json'
+
+},
+
 body:JSON.stringify({
 
-id:id,
 
-instagram:
+Application_ID:id,
+
+
+Instagram:
+
 document.querySelector(
+
 '[name="instagram"]'
+
 ).value,
 
-ign:
+
+IGN:
+
 document.querySelector(
+
 '[name="ign"]'
+
 ).value,
 
-uid:
+
+UID:
+
 document.querySelector(
+
 '[name="uid"]'
+
 ).value,
 
-smode:
+
+SMode:
+
 document.querySelector(
+
 '[name="smode"]'
+
 ).value,
 
-mainmode:
+
+MainMode:
+
 document.querySelector(
+
 '[name="mainmode"]'
+
 ).value,
 
-playertype:
+
+PlayerType:
+
 document.querySelector(
+
 '[name="playertype"]'
+
 ).value,
 
-proof1:url1,
 
-proof2:url2,
+Screenshot1:url1,
 
-proof3:url3
+Screenshot2:url2,
+
+Screenshot3:url3
+
 
 })
+
 
 });
 
@@ -1104,28 +1135,31 @@ id
 
 +
 
-"\n\nStatus: Under Review"
+"\n\nRecruiters will contact you on Instagram if accepted."
+
 
 );
+
+
+this.reset();
+
 
 }
 
 catch(error){
 
+
 console.log(error);
+
 
 alert(
 
-"Upload failed.\nPlease try again."
+"Submission failed.\nPlease try again."
 
 );
 
+
 }
-
-this.reset();
-
-});
-
 
 
 function checkStatus(){
