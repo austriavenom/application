@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Austria Venom Recruitment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Rajdhani,sans-serif;
+
+background:
+linear-gradient(180deg,#090909,#14001f);
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:100%;
+height:100%;
+
+background:url("logo.png");
+
+background-size:55%;
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+opacity:.06;
+
+z-index:-2;
+
+}
+
+
+.smoke{
+
+position:fixed;
+
+width:200%;
+
+height:200%;
+
+background:
+radial-gradient(circle,
+rgba(138,43,226,.15),
+transparent 60%);
+
+animation:smoke 25s linear infinite;
+
+z-index:-1;
+
+}
+
+
+@keyframes smoke{
+
+0%{
+
+transform:
+translate(-20%,-20%)
+rotate(0deg);
+
+}
+
+100%{
+
+transform:
+translate(20%,20%)
+rotate(360deg);
+
+}
+
+}
+
+
+header{
+
+text-align:center;
+
+padding:70px 20px;
+
+}
+
+
+.badge{
+
+display:inline-block;
+
+padding:8px 20px;
+
+border-radius:30px;
+
+background:#ff0000;
+
+font-weight:bold;
+
+margin-bottom:25px;
+
+box-shadow:
+
+0 0 15px red;
+
+animation:pulse 2s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+
+.logo{
+
+width:220px;
+
+margin-bottom:25px;
+
+filter:
+drop-shadow(0 0 15px #8A2BE2);
+
+}
+
+
+h1{
+
+font-family:Orbitron;
+
+font-size:50px;
+
+color:#B266FF;
+
+}
+
+
+.tagline{
+
+font-size:24px;
+
+margin-top:20px;
+
+opacity:.85;
+
+}
+
+
+.apply{
+
+margin-top:40px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:#8A2BE2;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:
+
+0 0 20px #8A2BE2;
+
+}
+
+
+.apply:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 0 35px #B266FF;
+
+}
+
+
+section{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 25px;
+
+}
+
+
+.card{
+
+background:
+
+rgba(255,255,255,.05);
+
+backdrop-filter:blur(8px);
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.1);
+
+margin-top:30px;
+
+}
+
+
+.section-title{
+
+font-family:Orbitron;
+
+font-size:32px;
+
+color:#B266FF;
+
+margin-bottom:25px;
+
+}
+
+
+.requirements li{
+
+margin-bottom:15px;
+
+font-size:20px;
+
+}
+
+
+.staff{
+
+font-size:22px;
+
+line-height:1.8;
+
+}
+
+input,
+select{
+
+
+width:100%;
+
+padding:14px;
+
+margin-top:10px;
+
+margin-bottom:20px;
+
+
+background:
+
+rgba(255,255,255,.05);
+
+
+border:none;
+
+
+border-radius:12px;
+
+
+color:white;
+
+}
+
+
+
+.submitBtn{
+
+
+width:100%;
+
+
+padding:18px;
+
+
+background:#8A2BE2;
+
+
+border:none;
+
+
+border-radius:40px;
+
+
+font-size:18px;
+
+
+cursor:pointer;
+
+
+margin-top:30px;
+
+
+box-shadow:
+
+0 0 20px #8A2BE2;
+
+
+}
+
+
+
+.discord{
+
+
+padding:16px 35px;
+
+
+background:#5865F2;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+cursor:pointer;
+
+
+color:white;
+
+
+font-size:18px;
+
+
+}
+
+
+
+.instaCard{
+
+
+padding:25px;
+
+
+border-radius:20px;
+
+
+background:
+
+rgba(255,255,255,.05);
+
+
+}
+
+
+
+#musicToggle{
+
+
+position:fixed;
+
+
+top:25px;
+
+
+right:25px;
+
+
+padding:12px 18px;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+background:#8A2BE2;
+
+
+color:white;
+
+
+cursor:pointer;
+
+
+z-index:999;
+
+
+}
+
+
+
+footer{
+
+
+text-align:center;
+
+
+padding:50px;
+
+
+opacity:.7;
+
+
+font-size:18px;
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+h1{
+
+
+font-size:35px;
+
+
+}
+
+
+.logo{
+
+
+width:150px;
+
+
+}
+
+
+.tagline{
+
+
+font-size:18px;
+
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="smoke"></div>
+
+<header>
+
+<div class="badge">
+
+🔴 RECRUITMENT OPEN
+
+</div>
+
+
+<br>
+
+
+<img src="logo.jpg"
+class="logo">
+
+
+<h1>
+
+AUSTRIA VENOM
+
+</h1>
+
+
+<p class="tagline">
+
+"We don't need perfect aim.<br>
+
+We need players who never quit."
+
+</p>
+
+
+<button class="apply" onclick="document.getElementById('application').scrollIntoView({behavior:'smooth'})">
+
+✦ APPLY NOW ✦
+
+</button>
+
+</header>
+
+
+
+<section>
+
+<div class="card">
+
+
+<h2 class="section-title">
+
+ABOUT US
+
+</h2>
+
+
+<p>
+
+Austria Venom is an international
+
+Call of Duty Mobile clan built on
+
+loyalty, teamwork and consistency.
+
+
+<br><br>
+
+
+Whether you're a casual grinder
+
+or a competitive player,
+
+Austria Venom welcomes members
+
+who stay committed and never give up.
+
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="card">
+
+
+<h2 class="section-title">
+
+LEADERSHIP
+
+</h2>
+
+
+<div class="staff">
+
+👑 Clan Master
+
+<br>
+
+AV Heroine
+
+
+<br><br>
+
+
+🛡 Recruiters
+
+<br>
+
+Coming Soon
+
+
+<br><br>
+
+
+⚔ Clan War Officers
+
+<br>
+
+Coming Soon
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="card">
+
+
+<h2 class="section-title">
+
+REQUIREMENTS
+
+</h2>
+
+
+
+<ul class="requirements">
+
+
+<li>
+
+✅ Add AV to your IGN
+
+</li>
+
+
+<li>
+
+✅ Join Instagram Group Chat
+
+<br>
+
+ID:
+
+6743874455384096770
+
+</li>
+
+
+
+<li>
+
+✅ Follow
+
+@austria_venom
+
+</li>
+
+
+<li>
+
+✅ Like the latest two posts
+
+</li>
+
+
+</ul>
+
+
+
+</div>
+
+</section>
+<section id="application">
+
+<div class="card">
+
+<h2 class="section-title">
+
+APPLICATION FORM
+
+</h2>
+
+
+<form id="recruitForm">
+
+
+<label>Instagram Username</label>
+
+<input type="text" name="instagram" required>
+
+
+
+<label>IGN</label>
+
+<input type="text" name="ign" required>
+
+
+
+<label>UID</label>
+
+<input type="number" name="uid" required>
+
+
+
+<label>SMode</label>
+
+<input type="text" name="smode" required>
+
+
+
+<label>Main Mode</label>
+
+<select name="mainmode">
+
+<option>MP</option>
+
+<option>BR</option>
+
+</select>
+
+
+
+<label>Player Type</label>
+
+<select name="playertype">
+
+<option>Casual</option>
+
+<option>Competitive</option>
+
+</select>
+
+
+
+<h3 style="margin-top:30px;color:#B266FF">
+
+Required Screenshots
+
+</h3>
+
+
+<label>
+
+Proof #1 — AV Tag in IGN
+
+</label>
+
+<input type="file" name="proof1" accept="image/*">
+
+
+
+<label>
+
+Proof #2 — Joined Instagram GC
+
+</label>
+
+<input type="file" name="proof2" accept="image/*">
+
+
+
+<label>
+
+Proof #3 — Followed Account & Liked Posts
+
+</label>
+
+<input type="file" name="proof3" accept="image/*">
+
+
+<button type="submit" class="submitBtn">
+
+Submit Application
+
+</button>
+
+
+</form>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="card">
+
+
+<h2 class="section-title">
+
+COMMUNITY
+
+</h2>
+
+
+
+<div class="instaCard">
+
+<h3>
+
+Austria Venom
+
+</h3>
+
+
+<p>
+
+@austria_venom
+
+</p>
+
+
+<button onclick="window.open('https://instagram.com/austria_venom')">
+
+Open Instagram
+
+</button>
+
+
+</div>
+
+
+
+<br>
+
+
+
+<button class="discord"
+
+onclick="window.open('https://discord.gg/qBWZ8qWjB')">
+
+
+🎮 Join Our Discord
+
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<button id="musicToggle">
+
+🔇 Music OFF
+
+</button>
+
+
+
+<audio id="bgmusic" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+<section>
+
+<div class="card">
+
+
+<h2 class="section-title">
+
+CHECK APPLICATION STATUS
+
+</h2>
+
+
+<input id="uidSearch"
+
+placeholder="Enter UID">
+
+
+
+<button onclick="checkStatus()">
+
+Check Status
+
+</button>
+
+
+
+<p id="statusResult">
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+
+AUSTRIA VENOM © 2025
+
+
+<br>
+
+
+Built with loyalty, teamwork,
+and determination.
+
+
+</footer>
+
+<script>
+
+const music=document.getElementById("bgmusic");
+const toggle=document.getElementById("musicToggle");
+
+let playing=false;
+const scriptURL = "https://script.google.com/macros/s/AKfycbzlegY9meOo7LzdjfL9y5qdOqCyv4x-GqaNFaA704HNa-uEZ74LtEoqQWHejbe5bReecw/exec";
+
+toggle.onclick=function(){
+
+if(!playing){
+
+music.play();
+
+toggle.innerHTML="🔊 Music ON";
+
+playing=true;
+
+}
+
+else{
+
+music.pause();
+
+toggle.innerHTML="🔇 Music OFF";
+
+playing=false;
+
+}
+
+};
+
+async function uploadImage(file){
+
+const formData = new FormData();
+
+formData.append('file', file);
+
+formData.append(
+'upload_preset',
+'austria_venom_uploads'
+);
+
+const response = await fetch(
+
+'https://api.cloudinary.com/v1_1/dbvcn5nir/image/upload',
+
+{
+method:'POST',
+body:formData
+}
+
+);
+
+const data = await response.json();
+
+return data.secure_url;
+
+}
+
+function generateID(){
+
+let num=Math.floor(
+
+Math.random()*9000)+1000;
+
+
+return "AV-2025-"+num;
+
+}
+
+
+
+document.getElementById("recruitForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const id = generateID();
+
+const proof1 =
+document.querySelector(
+'[name="proof1"]'
+).files[0];
+
+const proof2 =
+document.querySelector(
+'[name="proof2"]'
+).files[0];
+
+const proof3 =
+document.querySelector(
+'[name="proof3"]'
+).files[0];
+
+if(!proof1 || !proof2 || !proof3){
+
+alert(
+
+"Please upload all three screenshots."
+
+);
+
+return;
+
+}
+
+try{
+
+alert("Uploading screenshots...");
+
+const url1 =
+await uploadImage(proof1);
+
+const url2 =
+await uploadImage(proof2);
+
+const url3 =
+await uploadImage(proof3);
+
+
+
+await fetch(scriptURL,{
+
+method:"POST",
+
+body:JSON.stringify({
+
+id:id,
+
+instagram:
+document.querySelector(
+'[name="instagram"]'
+).value,
+
+ign:
+document.querySelector(
+'[name="ign"]'
+).value,
+
+uid:
+document.querySelector(
+'[name="uid"]'
+).value,
+
+smode:
+document.querySelector(
+'[name="smode"]'
+).value,
+
+mainmode:
+document.querySelector(
+'[name="mainmode"]'
+).value,
+
+playertype:
+document.querySelector(
+'[name="playertype"]'
+).value,
+
+proof1:url1,
+
+proof2:url2,
+
+proof3:url3
+
+})
+
+});
+
+
+alert(
+
+"Application Submitted!\n\n"
+
++
+
+id
+
++
+
+"\n\nStatus: Under Review"
+
+);
+
+}
+
+catch(error){
+
+console.log(error);
+
+alert(
+
+"Upload failed.\nPlease try again."
+
+);
+
+}
+
+this.reset();
+
+});
+
+
+
+function checkStatus(){
+
+
+let uid=document.getElementById(
+
+"uidSearch"
+
+).value;
+
+
+
+let result=document.getElementById(
+
+"statusResult"
+
+);
+
+
+
+if(uid=="123456"){
+
+result.innerHTML=
+
+"🟢 Approved";
+
+
+}
+
+
+
+else if(uid=="111111"){
+
+
+result.innerHTML=
+
+"🔴 Rejected";
+
+
+}
+
+
+
+else{
+
+
+result.innerHTML=
+
+"🟡 Under Review";
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
