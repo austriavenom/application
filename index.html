@@ -929,7 +929,7 @@ const music=document.getElementById("bgmusic");
 const toggle=document.getElementById("musicToggle");
 
 let playing=false;
-const scriptURL = "https://script.google.com/macros/s/AKfycbzlegY9meOo7LzdjfL9y5qdOqCyv4x-GqaNFaA704HNa-uEZ74LtEoqQWHejbe5bReecw/exec";
+const formspreeURL = "https://formspree.io/f/maqgoggw";
 
 toggle.onclick=function(){
 
@@ -978,6 +978,14 @@ body:formData
 );
 
 const data = await response.json();
+
+console.log(data);
+
+if(data.error){
+
+throw new Error(data.error.message);
+
+}
 
 return data.secure_url;
 
@@ -1032,7 +1040,10 @@ return;
 
 try{
 
-alert("Uploading screenshots...");
+const submitBtn = document.querySelector(".submitBtn");
+
+submitBtn.disabled = true;
+submitBtn.innerText = "Uploading...";
 
 
 const url1 = await uploadImage(proof1);
@@ -1040,7 +1051,7 @@ const url2 = await uploadImage(proof2);
 const url3 = await uploadImage(proof3);
 
 
-await fetch(formspreeURL,{
+const response = await fetch(formspreeURL,{
 
 method:"POST",
 
@@ -1124,6 +1135,16 @@ Screenshot3:url3
 
 });
 
+if(!response.ok){
+
+throw new Error(
+
+"Formspree submission failed"
+
+);
+
+}
+
 
 alert(
 
@@ -1160,6 +1181,8 @@ alert(
 
 
 }
+
+});
 
 
 function checkStatus(){
