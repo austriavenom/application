@@ -253,6 +253,135 @@ margin-bottom:25px;
 
 }
 
+.section-subtitle{
+
+margin-top:-10px;
+margin-bottom:25px;
+
+color:#caa7ff;
+
+font-size:17px;
+
+text-align:center;
+
+line-height:1.7;
+
+}
+
+.position{
+
+margin:18px 0;
+
+padding:18px;
+
+background:rgba(255,255,255,.04);
+
+border-left:4px solid #9d4edd;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.position:hover{
+
+transform:translateX(8px);
+
+background:rgba(157,78,221,.12);
+
+box-shadow:0 0 18px rgba(157,78,221,.35);
+
+}
+
+.position h3{
+
+margin-bottom:10px;
+
+color:#d8b6ff;
+
+font-size:22px;
+
+}
+
+.position p{
+
+line-height:1.7;
+
+color:#ddd;
+
+}
+
+.badge-open{
+
+display:inline-block;
+
+margin-left:10px;
+
+padding:4px 10px;
+
+background:#28a745;
+
+color:#fff;
+
+font-size:12px;
+
+font-weight:bold;
+
+border-radius:20px;
+
+letter-spacing:1px;
+
+box-shadow:0 0 10px rgba(40,167,69,.5);
+
+animation:pulseOpen 1.8s infinite;
+
+}
+
+@keyframes pulseOpen{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.staff-note{
+
+margin-top:30px;
+
+padding:18px;
+
+background:rgba(157,78,221,.12);
+
+border:1px solid #9d4edd;
+
+border-radius:12px;
+
+text-align:center;
+
+font-weight:bold;
+
+line-height:1.8;
+
+color:#f0e6ff;
+
+}
+
 
 .requirements li{
 
@@ -723,6 +852,138 @@ Eia
 
 </section>
 
+<section>
+
+<div class="card">
+
+<h2 class="section-title">
+
+OPEN POSITIONS
+
+</h2>
+
+<p class="section-subtitle">
+
+Want to do more than just play?
+Join the <b>Austria Venom Staff Team</b> and help build one of the community's fastest-growing CODM clans!
+
+</p>
+
+<div class="position">
+
+<h3>
+🎯 Recruiter
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Review recruitment applications, welcome new members, and help them settle into the clan.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+🎮 Scrim Manager
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Organize scrims, coordinate teams, schedule practice matches, and ensure events run smoothly.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+📺 Live Stream Handler
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Manage and host live streams for clan scrims, ranked gameplay, tournaments, and special events. Coordinate with players to provide entertaining and professional broadcasts.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+📱 Social Media Manager
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Manage Austria Venom's Instagram and Discord announcements, create engaging posts, and keep the community informed about events and updates.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+🎨 Graphic Designer
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Design posters, event banners, recruitment graphics, player cards, and promotional artwork for the clan.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+🎬 Video Editor
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Edit gameplay highlights, scrim recaps, montages, promotional videos, and other content for Austria Venom's social media.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+📢 Community Moderator
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Help moderate Discord and Instagram group chats, answer member questions, and maintain a respectful and welcoming environment.
+</p>
+
+</div>
+
+<div class="position">
+
+<h3>
+🤝 Partnership Manager
+<span class="badge-open">OPEN</span>
+</h3>
+
+<p>
+Build relationships with other clans, arrange scrims, tournaments, collaborations, and community events.
+</p>
+
+</div>
+
+<div class="staff-note">
+
+⭐ Interested in one of these roles?
+Mention the <b>position you're applying for</b> in your application form, or contact <b>Clan Leadership</b> directly for more information.
+
+</div>
+
+</div>
+
+</section>
+
 
 
 <section>
@@ -873,6 +1134,30 @@ APPLICATION FORM
 <option>Casual</option>
 
 <option>Competitive</option>
+
+</select>
+
+<label>Interested in a Staff Position? (Optional)</label>
+
+<select name="staffposition">
+
+<option value="">None</option>
+
+<option>Recruiter</option>
+
+<option>Scrim Manager</option>
+
+<option>Live Stream Handler</option>
+
+<option>Social Media Manager</option>
+
+<option>Graphic Designer</option>
+
+<option>Video Editor</option>
+
+<option>Community Moderator</option>
+
+<option>Partnership Manager</option>
 
 </select>
 
@@ -1071,7 +1356,7 @@ const music=document.getElementById("bgmusic");
 const toggle=document.getElementById("musicToggle");
 
 let playing=false;
-const formspreeURL = "https://formspree.io/f/maqgoggw";
+const formspreeURL = "https://formspree.io/f/mgojlabj";
 
 toggle.onclick=function(){
 
