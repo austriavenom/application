@@ -382,6 +382,20 @@ color:#f0e6ff;
 
 }
 
+.form-note{
+
+font-size:14px;
+
+color:#c9b3ff;
+
+margin-top:8px;
+
+line-height:1.5;
+
+font-style:italic;
+
+}
+
 
 .requirements li{
 
@@ -809,40 +823,23 @@ LEADERSHIP
 
 <div class="staff">
 
-👑 Clan Master
+👑 Clan Master: Shanelle
+<br><br>
 
-<br>
 
-Shanelle
-
+⚜ Vice Clan Master: Ceejay
+<br>UID: 6743874455384096770
 
 <br><br>
 
 
-⚜ Vice Clan Master
-
-<br>
-
-Ceejay
-
-
+⚔ Clan Admin: Spades
 <br><br>
 
-
-⚔ Clan Admin
-
-<br>
-
-Spades
-
-
+⚠ Disciplinary Admin: Arth
 <br><br>
 
-💌 Clan Moderator
-
-<br>
-
-Eia
+💌 Clan Moderator: Eia
 
 
 </div>
@@ -1125,8 +1122,6 @@ APPLICATION FORM
 
 </select>
 
-
-
 <label>Player Type</label>
 
 <select name="playertype">
@@ -1137,6 +1132,25 @@ APPLICATION FORM
 
 </select>
 
+<label>Preferred Instagram Group Chat</label>
+
+<select name="groupchat" required>
+
+<option value="">Select a Group Chat</option>
+
+<option>Main GC</option>
+
+<option>WLW GC</option>
+
+</select>
+<p class="form-note">
+
+💜 Main GC is open to all members.
+
+🌸 WLW GC is intended for women-loving-women members who prefer that community space.
+
+</p>
+<br>
 <label>Interested in a Staff Position? (Optional)</label>
 
 <select name="staffposition">
@@ -1272,6 +1286,37 @@ onclick="window.open('https://discord.gg/qBWZ8qWjB')">
 
 </button>
 
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2 class="section-title">
+
+📢 ANNOUNCEMENT GROUP
+
+</h2>
+
+<p>
+
+Stay updated with clan announcements,
+events, giveaways, scrims, and important news.
+
+<br><br>
+
+<a href="https://www.instagram.com/j/AbYH6_Af_bQeTGRF/"
+target="_blank"
+class="discord-btn">
+
+📢 Join Announcement GC
+
+</a>
+
+</p>
 
 </div>
 
@@ -1550,6 +1595,11 @@ document.querySelector(
 
 '[name="playertype"]'
 
+).value,
+
+GroupChat:
+document.querySelector(
+'[name="groupchat"]'
 ).value,
 
 StaffPosition:
